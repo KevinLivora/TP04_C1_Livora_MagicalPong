@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 594791632017212237}
   - component: {fileID: 920272031417445330}
-  - component: {fileID: 7593691847133321290}
-  - component: {fileID: 6737130749846924158}
   - component: {fileID: 2725329196896860047}
   - component: {fileID: 3465193695606291817}
   - component: {fileID: 4571036967910959178}
@@ -53,36 +51,10 @@ MonoBehaviour:
   moveRight: 100
   moveDown: 115
   moveLeft: 97
+  spriteRenderer: {fileID: 0}
+  gameSettings: {fileID: 11400000, guid: aa310be347e7c2142bba2742f6e4b357, type: 2}
   moveSpeed: 1000
-  isContinuous: 1
---- !u!114 &7593691847133321290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3248383236609847650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bc82288582de034eb2f1114c8a0b091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Rotate
-  rotateRigth: 113
-  rotateLeft: 101
-  rotateSpeed: 10
---- !u!114 &6737130749846924158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3248383236609847650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72aaacb2927945e4e89902f3e3ca8598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
-  colorChange: 114
+  isPlayerOne: 1
 --- !u!212 &2725329196896860047
 SpriteRenderer:
   serializedVersion: 2
@@ -214,4 +186,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4

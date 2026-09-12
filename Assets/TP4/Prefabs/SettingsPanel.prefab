@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 2835751302548703827}
   - component: {fileID: 6461122926568967046}
   m_Layer: 5
-  m_Name: Slider P1 Speed
+  m_Name: Slider P2 Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2708,7 +2708,7 @@ GameObject:
   - component: {fileID: 5252849300454024879}
   - component: {fileID: 1367144678486910921}
   m_Layer: 5
-  m_Name: Text P1 Speed
+  m_Name: Text P2 Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2928,7 +2928,7 @@ GameObject:
   - component: {fileID: 8342865151267933067}
   - component: {fileID: 7030490863460631890}
   m_Layer: 5
-  m_Name: Slider Panel P2 Color
+  m_Name: Button Panel P2 Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4105,7 +4105,7 @@ GameObject:
   - component: {fileID: 487357849716820717}
   - component: {fileID: 8439477776774839910}
   m_Layer: 5
-  m_Name: Slider Panel P1 Color
+  m_Name: Button Panel P1 Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
