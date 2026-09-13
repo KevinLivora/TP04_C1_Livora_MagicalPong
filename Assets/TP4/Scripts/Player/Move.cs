@@ -12,12 +12,15 @@ public class Move : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool isPlayerOne = true;
+    private Vector3 initialPosition;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
+
+        initialPosition = transform.position;
     }
 
     private void Start()
@@ -27,7 +30,7 @@ public class Move : MonoBehaviour
         SetColor(isPlayerOne ? gameSettings.player1Color : gameSettings.player2Color);
     }
 
-    private void FixedUpdate() // Físicas: consigna pide Rigidbody -> AddForce
+    private void FixedUpdate() // Físicas
     {
         if (Input.GetKey(moveUp))
             rb.AddForce(new Vector2(0, moveSpeed * Time.fixedDeltaTime));
@@ -50,5 +53,11 @@ public class Move : MonoBehaviour
     public void SetColor(Color color)
     {
         spriteRenderer.color = color;
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = initialPosition;
+        rb.linearVelocity = Vector2.zero;
     }
 }

@@ -10,16 +10,14 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    public void ResetToCenter()
     {
-        Launch();
+        transform.position = Vector3.zero;
+        rb.linearVelocity = Vector2.zero;
     }
 
     public void Launch()
     {
-        transform.position = Vector3.zero;
-        rb.linearVelocity = Vector2.zero;
-
         float dirX = Random.value < 0.5f ? -1f : 1f;
         float dirY = Random.Range(-0.5f, 0.5f);
 

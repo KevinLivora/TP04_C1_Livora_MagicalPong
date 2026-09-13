@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3248383236609847650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.82, y: -0.21, z: 0}
-  m_LocalScale: {x: 0.7875, y: 2.89125, z: 1}
+  m_LocalPosition: {x: -6.7942, y: 0.0002, z: 0}
+  m_LocalScale: {x: 0.3964069, y: 1.9837656, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,14 +44,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3248383236609847650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3274b2e5290eeee4fa0e7d9e37ee5ab3, type: 3}
+  m_Script: {fileID: 11500000, guid: ccab9a63bcd9cf749bf40be83d05379e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
   moveUp: 119
   moveRight: 100
   moveDown: 115
   moveLeft: 97
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2725329196896860047}
   gameSettings: {fileID: 11400000, guid: aa310be347e7c2142bba2742f6e4b357, type: 2}
   moveSpeed: 1000
   isPlayerOne: 1

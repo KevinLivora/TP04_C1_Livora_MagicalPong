@@ -14,10 +14,8 @@ public class GameSettings : ScriptableObject
     public Color player2Color = Color.white;
 
     [Header("Reglas del partido")]
-    [Tooltip("Puntos necesarios para ganar (mejor de 5 = 3 puntos)")]
     public int pointsToWin = 3;
 
-    [Tooltip("Segundos que la pelota puede estar de un lado antes de que sea gol automático")]
     public float goalTimeLimit = 20f;
 
     [ContextMenu("Reset to Defaults")]

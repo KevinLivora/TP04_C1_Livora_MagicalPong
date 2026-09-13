@@ -7,7 +7,7 @@ public class SettingsController : MonoBehaviour
     [Header("Game Settings (asset)")]
     [SerializeField] private GameSettings gameSettings;
 
-    [Header("Players (opcional)")]
+    [Header("Players")]
     [SerializeField] private Move player1;
     [SerializeField] private Move player2;
 
@@ -27,8 +27,7 @@ public class SettingsController : MonoBehaviour
     [SerializeField] private Button btnP1Red, btnP1Blue, btnP1Green, btnP1Yellow;
     [SerializeField] private Button btnP2Red, btnP2Blue, btnP2Green, btnP2Yellow;
 
-    [Header("Match Settings (solo Main Menu)")]
-    [Tooltip("Contenedor de UI con los controles de puntos para ganar y timer de gol. Se oculta en Pause.")]
+    [Header("Match Settings")]
     [SerializeField] private GameObject matchSettingsSection;
     [SerializeField] private Button btnBestOf3;
     [SerializeField] private Button btnBestOf5;

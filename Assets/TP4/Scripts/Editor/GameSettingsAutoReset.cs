@@ -1,7 +1,6 @@
 #if UNITY_EDITOR
 using UnityEditor;
 
-// Vive en una carpeta "Editor": Unity la excluye automáticamente de cualquier build.
 [InitializeOnLoad]
 public static class GameSettingsAutoReset
 {
@@ -12,7 +11,6 @@ public static class GameSettingsAutoReset
 
     private static void OnPlayModeStateChanged(PlayModeStateChange state)
     {
-        // Justo al salir de Play, antes de que Unity guarde los cambios del asset.
         if (state != PlayModeStateChange.ExitingPlayMode) return;
 
         string[] guids = AssetDatabase.FindAssets("t:GameSettings");
