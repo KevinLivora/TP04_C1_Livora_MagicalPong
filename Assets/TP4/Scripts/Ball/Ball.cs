@@ -3,6 +3,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] private float initialSpeed = 500f;
+    [SerializeField] private float speedIncreaseOnHit = 1.1f;
+    [SerializeField] private float maxSpeed = 5000f;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -23,5 +25,16 @@ public class Ball : MonoBehaviour
 
         Vector2 direction = new Vector2(dirX, dirY).normalized;
         rb.AddForce(direction * initialSpeed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.GetComponent<Move>() == null) return;
+
+        Vector2 velocity = rb.linearVelocity * speedIncreaseOnHit;
+        if (velocity.magnitude > maxSpeed)
+            velocity = velocity.normalized * maxSpeed;
+
+        rb.linearVelocity = velocity;
     }
 }

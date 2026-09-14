@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16610e7a4b065424a9d918950994e5ea, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: Assembly-CSharp::GameSettings
-  player1Speed: 1000
+  player1Speed: 40000
   player1Height: 3
   player1Color: {r: 1, g: 1, b: 1, a: 1}
-  player2Speed: 1000
+  player2Speed: 40000
   player2Height: 3
   player2Color: {r: 1, g: 1, b: 1, a: 1}
   pointsToWin: 3

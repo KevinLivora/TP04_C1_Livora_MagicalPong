@@ -1740,6 +1740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   initialSpeed: 500
+  speedIncreaseOnHit: 1.1
+  maxSpeed: 5000
 --- !u!4 &818919898
 Transform:
   m_ObjectHideFlags: 0
@@ -3142,9 +3144,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251686977495678194, guid: 0c84aa4e1d894694686b36024340c2c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251686977495678194, guid: 0c84aa4e1d894694686b36024340c2c9, type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
     - target: {fileID: 1992281098260912489, guid: 0c84aa4e1d894694686b36024340c2c9, type: 3}
       propertyPath: m_Name
       value: Limits
+      objectReference: {fileID: 0}
+    - target: {fileID: 4117608702095314626, guid: 0c84aa4e1d894694686b36024340c2c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4117608702095314626, guid: 0c84aa4e1d894694686b36024340c2c9, type: 3}
+      propertyPath: m_TagString
+      value: Limit
       objectReference: {fileID: 0}
     - target: {fileID: 8157643627270476255, guid: 0c84aa4e1d894694686b36024340c2c9, type: 3}
       propertyPath: m_LocalPosition.x
