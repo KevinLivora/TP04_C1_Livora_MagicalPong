@@ -13,6 +13,7 @@ public class Move : MonoBehaviour
 
     public bool isPlayerOne = true;
     private Vector3 initialPosition;
+    private bool canMove = true;
 
     private void Awake()
     {
@@ -30,8 +31,10 @@ public class Move : MonoBehaviour
         SetColor(isPlayerOne ? gameSettings.player1Color : gameSettings.player2Color);
     }
 
-    private void FixedUpdate() // Físicas
+    private void FixedUpdate()
     {
+        if (!canMove) return;
+
         if (Input.GetKey(moveUp))
             rb.AddForce(new Vector2(0, moveSpeed * Time.fixedDeltaTime));
 
@@ -59,5 +62,10 @@ public class Move : MonoBehaviour
     {
         transform.position = initialPosition;
         rb.linearVelocity = Vector2.zero;
+    }
+
+    public void SetCanMove(bool value)
+    {
+        canMove = value;
     }
 }

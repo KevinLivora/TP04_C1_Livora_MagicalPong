@@ -31,6 +31,7 @@ public class MatchManager : MonoBehaviour
     private int scoreP1;
     private int scoreP2;
     private bool matchOver;
+    private Coroutine goalTimerCoroutine;
 
     private void Awake()
     {
@@ -64,6 +65,12 @@ public class MatchManager : MonoBehaviour
     {
         if (matchOver) return;
 
+        if (goalTimerCoroutine != null)
+            StopCoroutine(goalTimerCoroutine);
+
+        if (textCountdown != null)
+            textCountdown.gameObject.SetActive(false);
+
         if (scoringPlayer == 1) scoreP1++;
         else scoreP2++;
 
@@ -91,6 +98,9 @@ public class MatchManager : MonoBehaviour
         player2.ResetPosition();
         ball.ResetToCenter();
 
+        player1.SetCanMove(false);
+        player2.SetCanMove(false);
+
         float remaining = countdownSeconds;
 
         if (textCountdown != null)
@@ -109,6 +119,31 @@ public class MatchManager : MonoBehaviour
             textCountdown.gameObject.SetActive(false);
 
         ball.Launch();
+
+        player1.SetCanMove(true);
+        player2.SetCanMove(true);
+
+        goalTimerCoroutine = StartCoroutine(MonitorGoalTimer());
+    }
+
+    private IEnumerator MonitorGoalTimer()
+    {
+        float remaining = gameSettings.goalTimeLimit;
+
+        if (textCountdown != null)
+            textCountdown.gameObject.SetActive(true);
+
+        while (remaining > 0f)
+        {
+            if (textCountdown != null)
+                textCountdown.text = Mathf.CeilToInt(remaining).ToString();
+
+            yield return new WaitForSeconds(1f);
+            remaining -= 1f;
+        }
+
+        int scoringPlayer = ball.transform.position.x < 0f ? 2 : 1;
+        OnGoalScored(scoringPlayer);
     }
 
     private void EndMatch(int winningPlayer)
@@ -123,7 +158,6 @@ public class MatchManager : MonoBehaviour
         }
     }
 
-    // --- End Game Buttons ---
 
     private void OnPlayAgainClicked()
     {
@@ -135,3 +169,4 @@ public class MatchManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 }
+
