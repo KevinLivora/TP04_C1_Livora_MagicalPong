@@ -49,6 +49,8 @@ public class MatchManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
+
         scoreP1 = 0;
         scoreP2 = 0;
         matchOver = false;
@@ -154,7 +156,7 @@ public class MatchManager : MonoBehaviour
         {
             winPanel.SetActive(true);
             if (textWinner != null)
-                textWinner.text = $"¡Jugador {winningPlayer} gana!";
+                textWinner.text = $"¡Player {winningPlayer} wins!";
         }
     }
 
@@ -169,4 +171,3 @@ public class MatchManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 }
-

@@ -5,12 +5,12 @@ public class GameSettings : ScriptableObject
 {
     [Header("Player 1")]
     public float player1Speed = 40000f;
-    public float player1Height = 3f;
+    public float player1Height = 2f;
     public Color player1Color = Color.white;
 
     [Header("Player 2")]
     public float player2Speed = 40000f;
-    public float player2Height = 3f;
+    public float player2Height = 2f;
     public Color player2Color = Color.white;
 
     [Header("Reglas del partido")]
@@ -22,8 +22,8 @@ public class GameSettings : ScriptableObject
     {
         player1Speed = 40000f;
         player2Speed = 40000f;
-        player1Height = 3f;
-        player2Height = 3f;
+        player1Height = 2f;
+        player2Height = 2f;
         player1Color = Color.white;
         player2Color = Color.white;
 

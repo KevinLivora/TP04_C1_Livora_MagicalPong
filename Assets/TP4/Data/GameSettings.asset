@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: Assembly-CSharp::GameSettings
   player1Speed: 40000
-  player1Height: 3
+  player1Height: 2
   player1Color: {r: 1, g: 1, b: 1, a: 1}
   player2Speed: 40000
-  player2Height: 3
+  player2Height: 2
   player2Color: {r: 1, g: 1, b: 1, a: 1}
   pointsToWin: 3
   goalTimeLimit: 20
