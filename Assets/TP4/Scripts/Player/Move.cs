@@ -68,4 +68,18 @@ public class Move : MonoBehaviour
     {
         canMove = value;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.GetComponent<Ball>() != null)
+        {
+            SetColor(new Color(Random.value, Random.value, Random.value));
+            return;
+        }
+
+        if (collision.collider.CompareTag("Limit"))
+        {
+            SetColor(Color.black);
+        }
+    }
 }
