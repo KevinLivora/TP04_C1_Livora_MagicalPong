@@ -13,7 +13,6 @@ public class ChangeColor : MonoBehaviour
 
     void Update()
     {
-        // Color
         if (Input.GetKeyUp(colorChange))
             spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
     }

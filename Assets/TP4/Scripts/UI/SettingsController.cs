@@ -94,7 +94,6 @@ public class SettingsController : MonoBehaviour
             }
         }
     }
-
     private void OnDestroy()
     {
         sliderP1Speed.onValueChanged.RemoveAllListeners();
@@ -147,8 +146,6 @@ public class SettingsController : MonoBehaviour
         textP2Height.text = value.ToString("F1");
         if (player2 != null) player2.SetHeight(value);
     }
-
-    // --- Match Settings ---
 
     private void SetPointsToWin(int points)
     {
