@@ -8,7 +8,7 @@
 
 A 2-player local Pong game built in Unity, made for the **TP04** assignment of *Programación con Motores de Videojuegos I* (Tecnicatura Superior en Desarrollo de Videojuegos, Image Campus).
 
-**🎮 Play it here:** [itch.io link](#) <!-- replace with your published itch.io URL -->
+**🎮 Play it here:** https://kevinlivora.itch.io/magicalpong
 
 ### Features
 
@@ -73,8 +73,7 @@ Assets/TP4/
 
 Un juego de Pong local para 2 jugadores hecho en Unity, para el **TP04** de la materia *Programación con Motores de Videojuegos I* (Tecnicatura Superior en Desarrollo de Videojuegos, Image Campus).
 
-**🎮 Jugalo acá:** [link de itch.io](#) <!-- reemplazar con la URL publicada -->
-
+**🎮 Jugalo acá:** https://kevinlivora.itch.io/magicalpong
 ### Características
 
 - Movimiento con físicas para paddles y pelota (`Rigidbody2D` + `AddForce`)
